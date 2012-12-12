@@ -1,0 +1,101 @@
+<html>
+<head>
+	<title></title>
+</head>
+
+<style type="text/css">
+.container {
+    width: 400px;    
+    margin: 0 auto;        
+}
+
+.tile {
+    width: 105px;
+    height: 105px;
+    overflow: hidden;
+    z-index: 3;
+    cursor: pointer;
+    cursor: hand;
+    position: relative;
+    margin: 10px;
+    float: left;
+    /*border-bottom:5px solid #ccc;
+    border-right:5px solid #ccc;
+    -moz-border-radius:5px;    
+    border-radius:5px;*/
+    background-image:url(http://static.freepik.com/free-photo/wood-texture-textures-tree_327639.jpg);
+}
+
+.tile-background {
+    width: 100px;
+    height: 100px;   
+    background: red;  
+    position: absolute;            
+}
+
+.tile-forground {
+    width: 100px;
+    height: 100px;   
+    background: black;
+    position: absolute; 
+    z-index: 2;        
+}
+
+.glow {
+  box-shadow: 0 0 5px rgba(0, 0, 255, 1);
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 255, 1); 
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 255, 1);
+    border:1px solid rgba(0,0,255, 0.8);    
+}
+​
+</style>
+
+<body>
+
+	<div class="container">
+		<div class="tile">
+    		<div class="tile-background"><img src="http://img.photobucket.com/albums/v353/atarivcs/thisis.gif"/></div>
+    		<div class="tile-forground"><img src="http://mardiweb.com/web/psp7/menus/effects/sparkle.gif" /></div>   
+		</div>
+
+		<div class="tile">
+		    <div class="tile-background"></div>
+		    <div class="tile-forground"></div>   
+		</div>
+		
+		<div class="tile">
+		    <div class="tile-background"></div>
+		    <div class="tile-forground"></div>   
+		</div>
+		
+		<div class="tile">
+		    <div class="tile-background"></div>
+		    <div class="tile-forground"></div>   
+		</div>
+		
+		<div class="tile">
+		    <div class="tile-background"></div>
+		    <div class="tile-forground"></div>   
+		</div>
+		
+		<div class="tile">
+		    <div class="tile-background"></div>
+		    <div class="tile-forground"></div>   
+		</div>
+    
+	</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.tile').click(function() {
+			$(this).find('.tile-forground').animate({
+        		top: "-100px"
+    		}, {duration: 'slow',easing: 'easeOutBounce'});
+		});
+	});
+</script>
+
+</body>
+</html>
